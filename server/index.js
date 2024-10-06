@@ -8,6 +8,8 @@ import mongoose from "mongoose";
 const app = express(); // creates an object to represent the express modules to use it.
 app.use(express.json()); // middleware for json parser (req body)
 
+app.use(cors());
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
